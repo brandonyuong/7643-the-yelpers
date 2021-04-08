@@ -54,6 +54,7 @@ notebook==6.3.0
 numpy @ file:///C:/ci/numpy_and_numpy_base_1603466732592/work
 olefile==0.46
 packaging==20.9
+pandas==1.2.3
 pandocfilters==1.4.3
 parso==0.8.1
 pickleshare==0.7.5
@@ -70,6 +71,7 @@ pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
 pyrsistent==0.17.3
 PySocks @ file:///C:/ci/pysocks_1605287845585/work
 python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+pytz==2021.1
 pywin32==300
 pywinpty==0.5.7
 PyYAML==5.4.1
