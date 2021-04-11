@@ -2,19 +2,18 @@
 *~
 *.swo
 *.swp
+
 cache
 .idea
 CACHE/
+
 .coverage
 env
-
 .env
 
 __pycache__/
-.zip
 __init__.py
 .pptx#
 .png
-.json
 .csv
 data/
