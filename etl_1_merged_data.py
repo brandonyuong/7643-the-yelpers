@@ -28,19 +28,19 @@ data_file.close()
 data = None
 
 review_df = review_df[['business_id', 'stars', 'text']]
-# print(len(review_df)) # 8635403
+# print(review_df.shape[0]) # 8635403
 
 business_df = business_df[
     ['business_id', 'name', 'city', 'state', 'stars', 'review_count', 'categories']
 ]
 business_df.columns = ['business_id', 'name', 'city', 'state', 'avg_stars',
                        'review_count', 'categories']
-# print(len(business_df)) #160470
+# print(business_df.shape[0]) # 160585
 
-review_df.dropna(subset=['stars'], inplace=True)
-# print(len(review_df)) # 8635403
+# review_df.dropna(inplace=True)
+# print(review_df.shape[0]) # 8635403
 business_df.dropna(subset=['categories'], inplace=True)
-# print(len(business_df)) # 160470
+# print(business_df.shape[0]) # 160470
 
 # print(business_df.head(3))
 
@@ -61,5 +61,6 @@ def get_sentiment(row):
 
 merged_df['sentiment'] = merged_df.apply(get_sentiment, axis=1)
 print(merged_df.head(10))
+# print(merged_df.shape[0]) # 5574795
 
 merged_df.to_csv('./data/yelp_merged_data.csv', index=False)
