@@ -78,10 +78,12 @@ dependencies:
     - bleach==3.3.0
     - blis==0.7.4
     - catalogue==1.0.0
+    - click==7.1.2
     - cymem==2.0.5
     - decorator==4.4.2
     - defusedxml==0.7.1
     - entrypoints==0.3
+    - filelock==3.0.12
     - future==0.18.2
     - ipykernel==5.5.0
     - ipython==7.21.0
@@ -89,6 +91,7 @@ dependencies:
     - ipywidgets==7.6.3
     - jedi==0.18.0
     - jinja2==2.11.3
+    - joblib==1.0.1
     - jsonschema==3.2.0
     - jupyter==1.0.0
     - jupyter-client==6.1.12
@@ -119,15 +122,21 @@ dependencies:
     - pyzmq==22.0.3
     - qtconsole==5.0.3
     - qtpy==1.9.0
+    - regex==2021.4.4
+    - sacremoses==0.0.44
     - scipy==1.6.1
     - send2trash==1.5.0
+    - sentencepiece==0.1.95
     - spacy==2.3.5
     - srsly==1.0.5
     - terminado==0.9.3
     - testpath==0.4.4
     - thinc==7.4.5
+    - tokenizers==0.10.2
     - traitlets==5.0.5
+    - transformers==4.5.0
     - wasabi==0.8.2
     - wcwidth==0.2.5
     - webencodings==0.5.1
     - widgetsnbextension==3.5.1
+prefix: C:\Users\Brandon\.conda\envs\yelpers-project
