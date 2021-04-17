@@ -17,3 +17,5 @@ __init__.py
 .png
 .csv
 data/
+.ipynb_checkpoints/
+.pt

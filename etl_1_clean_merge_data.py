@@ -88,15 +88,13 @@ merged_df['word_count'] = merged_df['text'].apply(word_count)
 
 # merged_df['sentiment'] = merged_df.apply(get_sentiment, axis=1)
 
-humor_threshold = 3
 
-
-def eval_humor(row):
+def eval_humor(row, humor_threshold=10):
     # Evaluate humor based on "funny" column
     # For use with pandas apply()
     if row['funny'] >= humor_threshold:
         val = 1
-    elif row['funny'] == 0:
+    elif row['funny'] < humor_threshold:
         val = 0
     else:
         val = np.nan
@@ -106,21 +104,21 @@ def eval_humor(row):
 merged_df['humor'] = merged_df.apply(eval_humor, axis=1)
 
 print(merged_df.head(10))
-# print(merged_df.shape[0]) # 5574795
-# print(merged_df['word_count'].mean()) # 106.4523
-# print(merged_df['word_count'].median()) # 76.0
-# print(merged_df['word_count'].min()) # 1
-# print(merged_df['word_count'].max()) # 1028
-# print(merged_df['funny'].mean()) # 0.3851
-# print(merged_df['funny'].median()) # 0.0
-# print(merged_df['funny'].max()) # 610
-#
-# humor_label_pt = merged_df.pivot_table('text', ['humor'], aggfunc='count').reset_index()
-# print(humor_label_pt)
+print(merged_df.shape[0]) # 5574795
+print(merged_df['word_count'].mean()) # 106.4523
+print(merged_df['word_count'].median()) # 76.0
+print(merged_df['word_count'].min()) # 1
+print(merged_df['word_count'].max()) # 1028
+print(merged_df['funny'].mean()) # 0.3851
+print(merged_df['funny'].median()) # 0.0
+print(merged_df['funny'].max()) # 610
+
+humor_label_pt = merged_df.pivot_table('text', ['humor'], aggfunc='count').reset_index()
+print(humor_label_pt)
 """
    humor     text
-0    0.0  4582852
-1    1.0   197795
+0      0  5552090
+1      1    22705
 """
 
 merged_df.to_csv('./data/yelp_merged_data.csv', index=False)
